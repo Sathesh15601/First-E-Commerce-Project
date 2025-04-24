@@ -30,12 +30,14 @@ const Product = () => {
         {/* Product Images */}
         <div className="flex-1 flex-col-reverse gap-3 sm:flex">
           <div className="flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full">
-            {productData.image.map((image, index) => {
-              <img
-                src={image}
-                key={index}
-                className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer w"
-              />;
+            {productData.image.map((item, index) => {
+              return (
+                <img
+                  src={item}
+                  key={index}
+                  className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer w"
+                />
+              );
             })}
           </div>
         </div>
